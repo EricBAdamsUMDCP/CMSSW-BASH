@@ -1,0 +1,24 @@
+Error
+
+Type: CMSSW (Python)
+
+Enviornment: CMSSW_9_2_10
+
+Message: An exception of category 'ConfigFileReadError' occurred while
+   [0] Processing the python configuration file named /afs/cern.ch/user/e/eadams/CMSSW_9_2_10/src/Demo/DemoTrackAnalyzer/python/ConfFile_cfg.py
+Exception Message:
+python encountered the error: <type 'exceptions.ImportError'>
+No module named ParameterSet.Config
+
+Solution_Source: Me(Eric)
+
+Solution:
+
+In configfile.py line 1 was: import ParameterSet.Config as cms
+Problem is Parameter set is a member function.
+
+fixed by changing: import ParameterSet.Config as cms
+
+to
+
+import FWCore.ParameterSet.Config as cms
