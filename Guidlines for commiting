@@ -7,7 +7,7 @@ commit format
 write
 
 Error
-Type: <BASH or CMSSW>
+Type: <BASH or CMSSW(python, C++, xml, etc...)>
 Enviornment: <e.g. CMSSW X_x_y>
 
 Message: <The full error message>
