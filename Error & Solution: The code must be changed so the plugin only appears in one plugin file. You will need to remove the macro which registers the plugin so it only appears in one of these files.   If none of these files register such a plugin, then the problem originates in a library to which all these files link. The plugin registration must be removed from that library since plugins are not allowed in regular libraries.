@@ -1,0 +1,17 @@
+Error 
+Type: Bash
+Enviornment: CMSSW 10 3 0
+
+message: The code must be changed so the plugin only appears in one plugin file. You will need to remove the macro which registers the plugin so it only appears in one of these files.
+  If none of these files register such a plugin, then the problem originates in a library to which all these files link.
+The plugin registration must be removed from that library since plugins are not allowed in regular libraries.
+
+
+Solution_Source: https://twiki.cern.ch/twiki/bin/view/Main/HtoZZto2L2NU_Log
+
+solution: I had accidentally my plugin twice so to fix this I had to remove the double definition in the Buildfile and then run
+
+ scramv1 b clean 
+and then recompile. I also ran the command
+scramv1 b --reset 
+which didn't work on it's own, but perhaps needed to be used in tandem. I am not sure, but at lease using both of them worked. (This took me two days to figure out)
