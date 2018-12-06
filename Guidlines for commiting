@@ -1,0 +1,18 @@
+//To commit Errors they must be CMSSW or BASH related
+//If the error does not have a solution note this in the title by writting "Error & NO Solution: <Full Error message here>"
+//If the Error has a solution title the file "Error & Solution: <Full Error Message goes here>"
+
+commit format
+
+write
+
+Error
+Type: <BASH or CMSSW>
+Enviornment: <e.g. CMSSW X_x_y>
+
+Message: <The full error message>
+
+Solution_Source: <hyperlink, book name/isbn, or self/other person (name)>
+
+Solution: <in full detail do not leave things out>
+
