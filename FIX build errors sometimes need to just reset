@@ -1,0 +1,13 @@
+break from standard error report as this is an effective measure for dealing with anything weird as a build error
+
+type
+
+scram b clean
+
+then
+
+scram b --reset
+
+if it was a build error and your .xml is actually ok
+
+you should be fine... for now.
